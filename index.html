@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Astrocyte_Nanoarchitecure_WebGL_Project</title>
+    <title>Unity WebGL Player | Scratch</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Astrocyte_Nanoarchitecure_WebGL_Project</div>
+        <div id="unity-build-title">Scratch</div>
       </div>
     </div>
     <script>
@@ -58,13 +58,13 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Scratch_UnityWebGL.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Scratch_UnityWebGL.data",
-        frameworkUrl: buildUrl + "/Scratch_UnityWebGL.framework.js",
-        codeUrl: buildUrl + "/Scratch_UnityWebGL.wasm",
+        dataUrl: buildUrl + "/Scratch_UnityWebGL.data.gz",
+        frameworkUrl: buildUrl + "/Scratch_UnityWebGL.framework.js.gz",
+        codeUrl: buildUrl + "/Scratch_UnityWebGL.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "JBK",
-        productName: "Astrocyte_Nanoarchitecure_WebGL_Project",
-        productVersion: "0.0.0",
+        companyName: "DefaultCompany",
+        productName: "Scratch",
+        productVersion: "0.1",
         showBanner: unityShowBanner,
       };
 
@@ -83,13 +83,11 @@
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
 
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
